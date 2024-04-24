@@ -1,0 +1,36 @@
+body{
+    background-color: #cdf;
+}
+
+h1{
+    color: red;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 54px;
+}
+
+h2{
+    font-size: 48px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+h3{
+    font-size: 38px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: underline;
+    background-color: cornflowerblue;
+}
+
+p{
+    text-indent: 20px;
+    font-size: 28px;
+    text-align: left;
+    font-variant: small-caps;
+    color: goldenrod;
+}
+
+a{
+    text-decoration: none;
+    font-variant: small-caps;
+}
