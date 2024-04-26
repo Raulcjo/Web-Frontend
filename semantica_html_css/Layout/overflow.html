@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit Content</title>
+    <style>
+        .container{
+            border: 2px solid #000;
+            padding: 16px;
+            width: 300px;
+            margin-bottom: 16px;
+            height: 300px;
+            background-color: rgba(255, 0,0, 0.4);
+        }
+
+        .item{
+            background-color: blueviolet;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        .fit-content .item{
+            width: fit-content;
+        }
+
+        .min-content .item{
+            width: min-content;
+        }
+
+        .max-content .item{
+            width: max-content;
+        }
+
+        .overflow-hidden{
+            overflow: hidden;
+        }
+
+        .overflow-scroll{
+            overflow: scroll;
+        }
+
+        .overflow-auto{
+            overflow: auto;
+        }
+
+        .overflow-x-hidden{
+            overflow-x: hidden;
+        }
+
+        .overflow-y-hidden{
+            overflow-y: hidden;
+        }
+
+        .overflow-x-scroll{
+            overflow-x: scroll;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container fit-content overflow-hidden">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, autem!</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus 
+        provident dolorem eligendi quos facere ducimus sequi deserunt voluptate temporibus fugit 
+        totam culpa, magni sit similique!</div>
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe exercitationem
+        quae aut voluptatibus repudiandae officia voluptas repellendus atque assumenda, dolorum sint 
+        asperiores, quibusdam at laudantium. Quibusdam qui dolorem, incidunt enim voluptatibus impedit 
+        alias, similique nulla asperiores iste autem fugiat voluptatem reiciendis rerum blanditiis. Quo 
+        adipisci, itaque rerum placeat vel nihil saepe voluptatum commodi voluptatibus necessitatibus 
+        suscipit voluptate consequuntur ad expedita incidunt. Sunt sit saepe debitis soluta deleniti qui 
+        quidem impedit.</div>
+    </div>
+    <div class="container min-content overflow-y-hidden">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, autem!</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus 
+        provident dolorem eligendi quos facere ducimus sequi deserunt voluptate temporibus fugit 
+        totam culpa, magni sit similique!</div>
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe exercitationem
+        quae aut voluptatibus repudiandae officia voluptas repellendus atque assumenda, dolorum sint 
+        asperiores, quibusdam at laudantium. Quibusdam qui dolorem, incidunt enim voluptatibus impedit 
+        alias, similique nulla asperiores iste autem fugiat voluptatem reiciendis rerum blanditiis. Quo 
+        adipisci, itaque rerum placeat vel nihil saepe voluptatum commodi voluptatibus necessitatibus 
+        suscipit voluptate consequuntur ad expedita incidunt. Sunt sit saepe debitis soluta deleniti qui 
+        quidem impedit.</div>
+    </div>
+    <div class="container max-content overflow-x-hidden">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, autem!</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus 
+        provident dolorem eligendi quos facere ducimus sequi deserunt voluptate temporibus fugit 
+        totam culpa, magni sit similique!</div>
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe exercitationem
+        quae aut voluptatibus repudiandae officia voluptas repellendus atque assumenda, dolorum sint 
+        asperiores, quibusdam at laudantium. Quibusdam qui dolorem, incidunt enim voluptatibus impedit 
+        alias, similique nulla asperiores iste autem fugiat voluptatem reiciendis rerum blanditiis. Quo 
+        adipisci, itaque rerum placeat vel nihil saepe voluptatum commodi voluptatibus necessitatibus 
+        suscipit voluptate consequuntur ad expedita incidunt. Sunt sit saepe debitis soluta deleniti qui 
+        quidem impedit.</div>
+    </div>
+</body>
+</html>
