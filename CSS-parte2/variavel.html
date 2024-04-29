@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis em CSS</title>
+    <style>
+        :root{ /*O root não gera especificidade*/
+            --header-height: 15rem; /* Criando uma variável em CSS */
+            --main-color: rgba(255, 0, 0, .7);
+        }
+
+        html{
+            font-size: 62.5%;
+        }
+
+        header{
+            width: 100%;
+            background-color: var(--main-color);
+            height: var(--header-height); /* Usando a variável */
+            font-size: 2rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        main{
+            /* Procura o valor da variável por escopo*/
+            --header-height: 2rem;
+            min-height: calc(100vh - var(--header-height) - 2rem);
+            background-color: #ccc;
+            font-size: 2rem;
+            margin-top: var(--header-height);
+        }
+
+        p{
+            margin: calc(var(--header-height) * 2);
+        }
+
+        footer{
+            height: 10rem;
+            font-size: 2rem;
+            background-color: var(--main-color);
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <main>main
+        <p>teste</p>
+    </main>
+    <footer>footer
+        <p>teste2</p>
+    </footer>
+</body>
+</html>
