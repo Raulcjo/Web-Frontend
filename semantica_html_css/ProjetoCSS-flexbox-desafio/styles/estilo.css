@@ -1,0 +1,66 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-image: url(../imagens/bg-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero{
+    padding: 1px;
+}
+
+.hero-content{
+    margin: 100px auto 0;
+    width: 80%;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content .main-title{
+    font-size: 56px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #000;
+    margin-bottom: 0;
+}
+
+.hero-content .sub-title{
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    padding: 16px;
+    display: inline-block;
+    border-bottom: 2px solid #fff;
+}
+
+.cursos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: 860px;
+    margin: auto;
+    background-color: #fff;
+    padding: 16px;
+}
+
+.card{
+    flex-basis: 250px;
+    flex-grow: 1;
+}
+
+.card img{
+    width: 100%;
+    display: block;
+}
+
+.card .cursos__nome {
+    background-color: #36332c;
+    color: #fff;
+    margin: 0;
+    padding: 8px;
+}
