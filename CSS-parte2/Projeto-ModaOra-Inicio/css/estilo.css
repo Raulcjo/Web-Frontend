@@ -1,0 +1,165 @@
+/* Fontes */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Belleza&family=Italiana&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
+
+/* Estilização da página */
+
+:root{
+
+    /* Cores */
+    --bg-top-header: #162028;
+    --cor-text-menu: #425564;
+    --cor-texts: #555;
+    --cor-fundo-box-img-detalhe: #003d52;
+    --cor-fundo-footer: #0b1717;
+    --cor-text-footer: #6f8597;
+    --cor-logo: #fff;
+
+    /* Tamanhos */
+    --large-default-padding: 16.5em;
+    --medium-default-padding: 4em;
+
+}
+
+/* Gerais */
+
+body{
+    font-family: "Roboto", tahoma, arial, sans-serif ;
+    margin: 0;
+    padding: 0;
+}
+
+/* #principal{
+    width: 64em;
+    margin: 1.25em auto;
+} */
+
+h1, h2{
+    font-family: 'Viaoda Libre', cusive;
+    font-weight: normal;
+}
+
+/* Header */
+
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-top-header);
+}
+
+.logotipo{
+    color: var(--cor-logo);
+    font-family: "Italiana";
+    margin-left: 4em;
+}
+
+.header-nav{
+    margin-right: 2em;
+    font-weight: bold;
+}
+
+.header-nav ul{
+    margin: 0;
+}
+
+.header-nav li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 1rem 0 0;
+    padding: 1em;
+}
+
+.header-nav a{
+    color: var(--cor-text-footer);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .8em;
+    letter-spacing: .20em;
+    transition: color .3s linear;
+}
+
+.header-nav a:hover{
+    color: #fff;
+}
+
+/* Main */
+
+.bg-img-topo{
+    background-color: #000;
+    height: 30.5em;
+}
+
+.portifolio{
+    padding: var(--medium-default-padding) var(--large-default-padding);
+    text-align: center;
+    margin: 2em 0;
+}
+
+.portifolio h2{
+    font-size: 2.25em;
+    color: #252525;
+}
+
+.portifolio p{
+    font-size: 1em;
+    line-height: 2;
+    color: var(--cor-texts);
+}
+
+.galeria{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 var(--large-default-padding) var(--medium-default-padding);
+    color: var(--cor-texts);
+}
+
+.galeria .card-galeria{
+    text-align: center;
+    /* margin: 0 6em 0; */
+}
+
+.card-galeria .titulo-galeria{
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+}
+
+.card-galeria .texto-galeria{
+    color: var(--cor-texts);
+}
+
+.sobre{
+    background-color: var(--cor-fundo-box-img-detalhe);
+    padding: calc(var(--large-default-padding) - 7em);
+    background-image: url(../imagens/bg_detalhe.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    color: #fff;
+}
+
+.sobre h2{
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: normal;
+}
+
+.sobre p{
+    width: 70%;
+    line-height: 1.5em;
+}
+
+/* Footer */
+
+.rodape{
+    background-color: var(--cor-fundo-footer);
+    padding: 1.8em;
+    font-size: .75em;
+    letter-spacing: 0.3em;
+    height: 3em;
+    text-align: center;
+    color: #fff;
+}
