@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+
+        table{
+            width: 80%;
+            margin: auto;  
+            background-color: beige;
+            border-collapse: collapse;
+        }
+
+        th{
+            background-color: rgb(241, 222, 179);
+            border: 2px solid rgb(110, 102, 83);
+            padding: 16px;
+        }
+
+        td{
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Usar sempre quando for necessário mostrar dados tabulares -->
+    
+    <table><!-- * Tag que inicia a tabela  -->
+        <caption>Tabela de preços de cursos</caption><!-- Como se fosse o título da tabela -->
+
+        <thead><!-- Tag semântica - Diz ao browser que a tag que está ali dentro faz para do cabeçalho
+                    da tabela -->
+            <tr><!-- Table row - linha das tabelas -->
+                <th>Área</th> <th>Curso</th> <th>Investimento</th> <!-- Table header (tag semântica) - Cabeçalho da tabela-->
+            </tr>
+        </thead>
+
+        <tbody> <!-- Tag semântica - Diz ao browser que tudo o que está ali dentro faz parte do corpo
+                    da tabela -->
+            <tr>
+                <td rowspan="3">Design</td> <!-- Table data - coluna das tabelas e informaçãoes da tabela-->
+                <td>InDesign</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+            <tr>
+                <td>Photoshop</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+            <tr>
+                <td>Illustrator</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+
+            <tr>
+                <td rowspan="4">Development</td>
+                <td>HTML</td>
+                <td>R$ 1.000,00</td>
+            </tr> 
+            <tr>
+                <td>CSS</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+            <tr>
+                <td>Javascript</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+            <tr>
+                <td>PHP</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+        </tbody>
+
+        <tfoot><!-- Tag semântica - Diz ao browser que a tag que está ali dentro faz parte do rodapá 
+                    da tabela -->
+            <tr>
+                <td colspan="3">Valores sujeitos a alterações sem prévio aviso</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- *Obs: Todas as linhas tem que ter a mesma quantidade de colunas, também 
+    * não é possível mesclar duas colunas em uma só com essa tag sozinha. Mas é
+    * possivel fazer essas duas coisas usandoos atributos colspan e rowspan -->
+    
+</body>
+</html>

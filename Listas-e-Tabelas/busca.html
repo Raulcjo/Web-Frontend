@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <style>
+        
+        details{
+            color: red;
+            background-color: #ccc;
+            margin-bottom: 1em;
+            padding: .5em;
+        }
+
+        details summary{
+            cursor: pointer;
+        }
+
+        details[open]{
+            background-color: aqua;
+            color: #000;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>Curos web design</h1>
+    <details open>
+        <summary>Pré-requisitos</summary>
+        <p>Para fazer esse cursos é necessário conhecimentode em 
+            sistema operacional.
+        </p>
+    </details>
+    <details>
+        <summary>Carga horária</summary>
+        <p>180 horas</p>
+    </details>
+
+    <!-- Não é fácil mudar os ícones do details e em cada browser tem uma 
+    formatação de ícone para ele, por isso é sempre importante usar essa propriedade
+    quando realmente se quiser esse tipo de formatação -->
+    
+</body>
+</html>
