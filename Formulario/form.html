@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body{
+            padding-bottom: 100vh;
+        }
+
+        textarea{
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <form >
+        <fieldset>
+            <legend>Indrodução</legend>
+
+            <label for="email">Email</label>
+            <br>
+            <input type="email" name="email" required>
+            <br><br>
+
+            <label for="filhos">Quantidade de filhos</label>
+            <br>
+            <input type="number" id="filhos" min="0" max="1000">
+            <br><br>
+            <input type="date" name="data" id="date">
+
+            <br><br>
+            Possui atividade extra?
+            <label for="sim">
+                <input type="radio" name="atvExtra" id="sim" value="S"> Sim
+            </label>
+            <label for="nao">
+                <input type="radio" name="atvExtra" id="nao" value="N"> Não
+            </label>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Área de interesse</legend>
+
+            <label for="html">
+                <input type="checkbox" id="html" name="interesse" value="html">HTML
+            </label>
+            <label for="css">
+                <input type="checkbox" id="css" name="interesse" value="css">CSS
+            </label>
+            <label for="js">
+                <input type="checkbox" id="js" name="interesse" value="js">Javascript
+            </label>
+            <label for="python">
+                <input type="checkbox" id="python" name="interesse" value="python">Python
+            </label>
+            <label for="java">
+                <input type="checkbox" id="java" name="interesse" value="java">Java
+            </label>
+            <br><br>
+            <label for="">Escolha uma linguagem: 
+                <br>
+                <select name="linguagem" id="" required multiple size="8">
+                    <option value="">Selecione uma</option>
+
+                    <optgroup label="frontend">
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="js">Javascript</option>
+                    </optgroup>
+
+                    <optgroup label="backend">
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                    </optgroup>
+                </select>
+
+                <input type="text" list="linguagemList">
+                <datalist id="linguagemList">
+                    <option value="HTML">
+                    <option value="CSS">
+                    <option value="Javascript">
+                    <option value="Python">
+                    <option value="Java">
+                    <option value="PHP">
+                </datalist>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Escreva uma menssagem</legend>
+            <textarea name="msg" cols="30" rows="8"></textarea>
+            <br><br>
+            <textarea name="msg" cols="30" rows="8" disabled>
+CONTRATO DE UTILIZAÇÃO
+    1.1 REGRA 1
+
+    1.2 REGRA 2
+            </textarea>
+        <label for="termos">
+            <input type="checkbox" id="termos" checked>Li e aceito o contrato
+        </label>
+
+        <br><br>
+
+        <input type="file" name="" id="">
+        <br>
+        <input type="hidden" name="" value="abc">
+        <br>
+        <input type="range" name="" id="">
+        
+        </fieldset>
+        <br><br>
+
+        <input type="button" value="Button">
+        <input type="submit" value="Mandar">
+        <button type="submit">Mandar com Tag Button</button>
+    </form>
+
+</body>
+</html>
