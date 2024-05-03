@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contato.css">
     <title>Formulário de Login</title>
 </head>
 <body>
 
-    <form action="#">
-        <legend>Formulário de contato</legend>
-        <label for="nome">Seu Nome
-            <input type="text" placeholder="Digite seu nome completo" id="nome" name="nome">
-        </label>
-        <label for="email">Email
-            <input type="email" name="email" id="email" placeholder="Digite um email válido">
-        </label>
-        <label for="assunto">Assunto
-            <input type="text" id="assunto">
-        </label>
-        <label for="msg">
+    <form action="#" autocomplete="off">
+        <fieldset>
+            <legend>Formulário de contato</legend>
 
-        </label>
+            <label for="nome">Seu Nome</label>
+            <input type="text" placeholder="Digite seu nome completo" id="nome" name="nome" required >
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Digite um email válido" required>
+            
+            <label for="subject">Assunto</label>
+            <input type="text" id="subject">
+            
+            <label for="msg">Mensagem</label>
+            <textarea name="msg" id="msg" rows="7" minlength="20" maxlength="1000" placeholder="Conte-nos tudo" required></textarea>
+            
+            <button type="submit" class="btn">Enviar</button>
+        </fieldset>
+
     </form>
     
 </body>

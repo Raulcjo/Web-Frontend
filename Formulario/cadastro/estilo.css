@@ -1,0 +1,120 @@
+:root{
+    --cor-principal: #3a68b7;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
+
+html{
+    background-color: var(--cor-principal);
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-bg{
+    background-image: linear-gradient(to right, rgba(0, 0 , 0, .3) .5rem, white .5rem);
+    width: 90%;
+    min-width: 28.125em;
+    max-width: 35em;
+    padding-top: 1.4em;
+}
+
+.login_group{
+    border: none;
+    padding: 0 2em 2em;
+}
+
+.login_title-form{
+    font-weight: 400;
+    font-size: 2em;
+    color: var(--cor-principal);
+    padding: .7em 0 0.2em;
+}
+
+.login_input, 
+.login_label{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    padding: .7em 0;
+}
+
+.login_label{
+    font-weight: 100;
+    padding-bottom: 0em;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.login_input{
+    border: none;
+    border-bottom: 1px solid var(--cor-principal);
+    font-size: 1.2em;
+    outline-color: var(--cor-principal);
+}
+
+.login_input:focus{
+    padding-left: 0.5em;
+    transition: .4s;
+}
+
+.container-btn{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.6em 0 .2em;
+}
+
+.container-link{
+    display: flex;
+    align-items: center;
+    gap: .2em;
+    font-size: .8em;
+}
+
+/* Outra maneira de deixar o link alinhado:
+
+.form__action{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.form__action__aside{
+    font-size: .85rem;
+    flex-grow: 1;
+    text-align: right;
+} */
+
+.login_btn,
+.login_cad-btn {
+    border: none;
+    border-radius: 2px;
+    padding: .75em 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1em;
+    cursor: pointer;
+    letter-spacing: 0.8px;
+}
+
+.login_btn{
+    background-color: var(--cor-principal);
+    color: #fff;
+}
+
+.login_cad-btn{
+    color: var(--cor-principal);
+    text-decoration: none;
+}
+
