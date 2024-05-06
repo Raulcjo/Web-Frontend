@@ -16,7 +16,7 @@ p{
     margin: 0;
 }
 
-div::before{
+div::after{
     content: "";
     width: 20px;
     height: 20px;
@@ -25,4 +25,11 @@ div::before{
     position: absolute;
     right: 0;
     bottom: 0;
+}
+
+div::before{
+    content: url(https://placehold.co/64x64);
+    float: left;
+    margin-right: 1em;
+    /* display: inline-block; */
 }

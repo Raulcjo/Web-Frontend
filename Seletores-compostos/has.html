@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo has</title>
+    <style>
+        p a{
+            color: red;
+            background-color: yellow;
+        }
+
+        p:has(.teste){
+            background-color: #ccc;
+        }
+
+        table{
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 24px;
+        }
+
+        th,td{
+            border-bottom: 1px solid #ddd; 
+            padding: .5em;
+        }
+
+        th{
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+
+        tr:nth-child(even){
+            background-color: #f9f9f9;
+        }
+        tr:nth-child(odd){
+            background-color: #fff;
+        }
+
+        tr:hover{
+            background-color: #e9e9e9;
+        }
+
+        tr:has(td:first-child input[type="checkbox"]:checked) {
+            background-color: #aaffaa;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <table>
+        <thead>
+            <caption>Informações</caption>
+            <tr>
+                <th>Estado civil</th> <th>Nome</th> <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <label for="casado1">Casado
+                        <input type="checkbox" id="casado1">
+                    </label>
+                </td>
+                <td>Fernando Fernandes</td>
+                <td>fernando@gmail.com</td>
+                
+            </tr>
+            <tr>
+                <td>
+                    <label for="casado2">Casado
+                        <input type="checkbox" id="casado2">
+                    </label>
+                </td>
+                <td>Augusto Rodrigues</td>
+                <td>augusto@gmail.com</td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="casado3">Casado
+                        <input type="checkbox" id="casado3">
+                    </label>
+                </td>
+                <td>João Pereira</td>
+                <td>joao@gmail.com</td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="casado4">Casado
+                        <input type="checkbox" id="casado4">
+                    </label>
+                </td>
+                <td>Pedro Albuquerque</td>
+                <td>pedro@gmail.com</td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="casado5">Casado
+                        <input type="checkbox" id="casado5">
+                    </label>
+                </td>
+                <td>Gabriel Ono</td>
+                <td>gabriel@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.         Consequatur beatae minus eligendi sint minima hic iure ut 
+     distinctio accusantium <a href="#">clique aqui para saber mais</a> provident vitae vel reiciendis quas 
+     ducimus aliquid magni, amet eaque temporibus!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Consequatur beatae minus eligendi sint minima hic iure ut 
+    distinctio accusantium <a href="#" class="teste">clique aqui para saber mais</a>provident vitae vel reiciendis quas 
+    ducimus aliquid magni, amet eaque temporibus!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Consequatur beatae minus eligendi sint minima hic iure ut 
+    distinctio accusantium <a href="#">clique aqui para saber mais</a> provident vitae vel reiciendis quas 
+    ducimus aliquid magni, amet eaque temporibus!</p>
+
+
+</body>
+</html>

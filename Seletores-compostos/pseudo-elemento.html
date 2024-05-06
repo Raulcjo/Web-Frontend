@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-elementos</title>
+    <style>
+        p::first-letter{
+            font-size: 3em;
+            float: left;
+            margin-right: .2em;
+            line-height: 1;
+        }
+
+        p::first-line{
+            color: red;
+        }
+
+        ::selection{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Consequatur beatae minus eligendi sint minima hic iure ut 
+         distinctio accusantium provident vitae vel reiciendis quas 
+         ducimus aliquid magni, amet eaque temporibus!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Consequatur beatae minus eligendi sint minima hic iure ut 
+    distinctio accusantium provident vitae vel reiciendis quas 
+    ducimus aliquid magni, amet eaque temporibus!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Consequatur beatae minus eligendi sint minima hic iure ut 
+    distinctio accusantium provident vitae vel reiciendis quas 
+    ducimus aliquid magni, amet eaque temporibus!</p>
+</body>
+</html>

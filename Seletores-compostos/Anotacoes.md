@@ -1,5 +1,7 @@
 - [] Pesquisar melhor o que é o DOM 
 - [] Pesquisar como funciona o flex em geral
+- Dúvidas sobre pseudo-classes consultar http://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes
+- https://caniuse.com
 
 # Seletores compostos (CSS):
 
