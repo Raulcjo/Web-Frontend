@@ -1,0 +1,71 @@
+:root{
+    --gap-row: 2em;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(131, 80, 57);
+}
+
+.titulo{
+    font-weight: lighter;
+    font-size: 4.8rem;
+    text-align: center;
+    color: #fff;
+    margin: 6rem 0;
+}
+
+.post_container{
+    display: flex;
+    gap: var(--gap-row);
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    outline: 1px solid orange;
+}
+
+.post-content{
+    flex-basis: calc(33% - var(--gap-row));
+    flex-grow: 1;
+
+    background-image: linear-gradient(135deg, transparent 25px, #ccc 25px);
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+    padding: 4rem 3rem 3rem 5rem;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.post-titulo{
+    margin: 0;
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+.post-content p{
+    font-size: 1.4rem;
+}
+
+.dobra{
+    background-image: 
+    linear-gradient(135deg, transparent 25px, #aaa 25px),
+    linear-gradient(135deg, transparent 25px, #ccc 25px);
+    background-size: 3.4rem 3.4rem, 100%;
+    background-repeat: no-repeat;
+}
+
+.dobra2::before{
+    content: "";
+    display: block;
+    width: 3.4rem;
+    height: 3.4rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: 
+        linear-gradient(135deg, transparent 2.5rem, #ccc 2.5rem);
+    filter: drop-shadow(2px 2px 3px rgb(0, 0, 0, 0.3));
+    }
