@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <!-- Leva em consideração o tamanho da viewport para definir o layout -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        @media screen and (max-width: 500px){
+            body{
+                background-color: brown;
+                color: white;
+            }
+        }
+
+
+        /* a{
+            color: inherit;
+        } */
+
+        @media screen and (min-width: 600px){
+            body{
+                background-color: blueviolet;
+            }
+        }
+
+        .teste{
+            width: 320px;
+            height: 80px;
+            background-color: darkorange;
+        }
+
+    </style>
+    <link rel="stylesheet" href="type_media_print.css" media="print">
+    <title>Media Query</title>
+</head>
+<body class="only-print">
+
+    <h1>Media Query</h1>
+
+    <a href="http://serliv.com" title="Visite a página da Serliv">Serliv - cursos on-line</a>
+    
+    <div class="teste">teste</div>
+</body>
+</html>
