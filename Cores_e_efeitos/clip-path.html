@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cilp-path</title>
+    <style>
+
+        :root{
+            --gap-row: 2em;
+        }
+
+        html{
+            font-size: 62.5%;
+        }
+
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(131, 80, 57);
+        }
+
+        .titulo{
+            font-weight: lighter;
+            font-size: 4.8rem;
+            text-align: center;
+            color: #fff;
+            margin: 6rem 0;
+        }
+
+        .post-content{
+            width: 30rem;
+            height: 30rem;
+            background-color: #fff;
+
+            padding: 4rem 3rem 3rem 5rem;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .post-titulo{
+            margin: 0;
+            font-size: 2rem;
+            font-weight: lighter;
+        }
+
+        .post-content p{
+            font-size: 1.4rem;
+        }
+
+        .dobra{
+            background-image: 
+            linear-gradient(135deg, transparent 25px, #aaa 25px),
+            linear-gradient(135deg, transparent 25px, #ccc 25px);
+            background-size: 3.4rem 3.4rem, 100%;
+            background-repeat: no-repeat;
+        }
+
+        .dobra2::before{
+            content: "";
+            display: block;
+            width: 3.4rem;
+            height: 3.4rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .exemplo{
+            width: 0rem;
+            height: 0rem;
+            /* background-color: yellow; */
+            border-top: 10px solid black;
+            border-right: 25px solid transparent;
+            border-left: 25px solid transparent;
+            border-bottom: 35px solid blueviolet;
+
+            margin-top: 3rem;
+        }
+
+        .clippath > div{
+            width: 30rem;
+            height: 30rem;
+            margin: 3rem;
+            background-image: repeating-linear-gradient(45deg, yellow 10%, orange 20%);
+        }
+
+        #d1{
+            /* clip-path: polygon(x y, x y, x y, x y) cada um é um ponto da figura */
+            clip-path: polygon(0% 0%, 100% 0%, 0% 100%, 20% 60%);
+        }
+
+        #d2::before{
+            content: "";
+            background-color: aquamarine;
+            width: 20rem;
+            height: 20rem;
+            display: block;
+            clip-path: polygon(0% 40%, 30% 100%, 0% 100%, 50% 90%);
+        }
+
+        #d3{
+            /* clip-path: circle(número at direção) */
+            clip-path: circle(50% at center);
+        }
+
+        #d4{
+            /* clip-path: ellipse(largura, altura at direção) */
+            clip-path: ellipse(50% 2rem at center);
+        }
+
+        #d5{
+            /* clip-path: inset(cima, direita, baixo, esquerda) 
+            valores positivo sempre vão para dentro da figura */
+            clip-path: inset(2rem 3rem 4rem 5rem);
+        }
+
+        #d6{
+            /* clip-path: inset(valor na horizontal / valor na vertical) */
+            clip-path: inset(3rem round 5rem 2rem 1rem 25% / 2rem 5rem);
+        }
+
+        #d7{
+            /* clip-path: circle(valor at horizonl vertical) */
+            clip-path: circle(50% at 50% 50rem);
+        }
+
+    </style>
+</head>
+<body>
+
+    <article class="post-content">
+        <h2 class="post-titulo">Lorem, ipsum dolor.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit
+            . Odit non sunt enim doloribus in fuga dolore voluptatibus 
+            totam culpa? Asperiores voluptatum fugiat recusandae! Deserunt, 
+            quaerat ullam nam consequatur laudantium autem.</p>
+    </article>
+
+    <div class="exemplo"></div>
+
+    <section class="clippath">
+        <div id="d1"></div>
+        <div id="d2"></div>
+        <div id="d3"></div>
+        <div id="d4"></div>
+        <div id="d5"></div>
+        <div id="d6"></div>
+        <div id="d7"></div>
+
+    </section>
+    
+</body>
+</html>
