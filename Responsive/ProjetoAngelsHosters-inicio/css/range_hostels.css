@@ -278,12 +278,49 @@ min-width: 74em    -> col-xl
 .mainContent_title{
     text-transform: uppercase;
     color: var(--main-color);
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: .2em;
     font-size: 1.25em;
 }
 
 .mainContent .row{
     row-gap: 4em;
+}
+
+.mainContent_article{
+    container: main-content / inline-size;
+}
+
+@container main-content (min-width: 31.5em) {
+    .mainContent_container{
+        display: flex;
+        gap: var(--default-gap);
+    }
+
+    .mainContent_title{
+        margin-top: 0;
+    }
+
+    .mainContent_img img{
+        max-height: 11.4em;
+    }
+
+    .mainContent_img {
+        flex: 0 0 25%;
+    }
+
+    .mainContent_text{
+        flex-grow: 1;
+    }
+}
+
+.rodape{
+    width: 100%;
+    text-align: center;
+    background-color: #162436;
+    color: #fff;
+    padding: 2rem;
+    font-size: 1.2em;
+    margin-top: 3em;
 }
 
