@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos</title>
+    <style>
+        ::cue{
+            color: yellow;
+            font-size: 1.6em;
+            background-color: rgba(0, 0, 0, .5);
+        }
+    </style>
+</head>
+<body>
+    <video controls autoplay muted loop>
+        <source src="media/video.mp4" type="video/mp4"> <!-- mimetype -->
+        <source src="media/video.ogv" type="video/ogg">
+        <source src="media/video.webm" type="video/webm">
+        <track src="media/track.pt.vtt" kind="captions" srclang="pt" label="Português" default>
+        <track src="media/track.en.vtt" kind="captions" srclang="en" label="English">
+        <p>O seu browser não suporta vídeo</p>
+        <!-- O atributo kind pode conter os seguintes valores: subtitles, captions, descriptions, chapters e metadata. -->
+    </video>
+
+</body>
+</html>
