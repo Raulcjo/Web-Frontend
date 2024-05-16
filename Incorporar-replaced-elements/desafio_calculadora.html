@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Calculdora</title>
+    <style>
+        body{
+            background-image: linear-gradient(#7c69d1, #3f326d);
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .calcContainer{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 80px repeat(5, 60px);
+            background-image: linear-gradient(#5981a4, #2b4772);
+            gap: .5em;
+            
+            width: 300px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgb(0, 0, 0, .8);
+
+        }
+
+        .calc_painel,
+        .calc_buttons{
+            background-image: linear-gradient(rgb(53, 57, 61), #000);
+            color: #fff;
+
+        }
+
+        .calc_painel{
+            box-shadow: inset 3px 3px 0 #161616;
+            font-size: 2em;
+
+            margin-bottom: 20px;
+            padding: 10px 8px;
+            
+            grid-column: 1 / -1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .calc_buttons{
+            border: 2px solid black;
+            border-left-color: #8a8a8a;
+            border-top-color: #8a8a8a;
+            font-size: 1em;
+        }
+
+        .span-row-2{
+            grid-row: span 2;
+        }
+
+        .span-column-2{
+            grid-column: span 2;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- <h1>Calculadora</h1> -->
+
+    <div class="calcContainer">
+            <output type="text" class="calc_painel">0</output>
+            <input type="button" value="AC" class="calc_buttons">
+            <input type="button" value="%" class="calc_buttons">
+            <input type="button" value="x" class="calc_buttons">
+            <input type="button" value="/" class="calc_buttons">
+            <input type="button" value="7" class="calc_buttons">
+            <input type="button" value="8" class="calc_buttons">
+            <input type="button" value="9" class="calc_buttons">
+            <input type="button" value="=" class="calc_buttons">
+            <input type="button" value="4" class="calc_buttons">
+            <input type="button" value="5" class="calc_buttons">
+            <input type="button" value="6" class="calc_buttons">
+            <input type="button" value="-" class="calc_buttons">
+            <input type="button" value="1" class="calc_buttons">
+            <input type="button" value="2" class="calc_buttons">
+            <input type="button" value="3" class="calc_buttons">
+            <input type="button" value="+" class="calc_buttons span-row-2">
+            <input type="button" value="0" class="calc_buttons span-column-2">
+            <input type="button" value="," class="calc_buttons">
+    </div>
+    
+</body>
+</html>

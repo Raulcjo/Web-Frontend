@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Grid3</title>
+    <style>
+
+        body{
+            margin: 0;
+        }
+
+        .gridContainer{
+            width: 100vw;
+            height: 75vh;
+            background-color: #ccc;
+        }
+
+        .gridItem{
+            background-color: orange;
+            padding: 15px;
+            font-family: sans-serif;
+        }
+
+        /* Grid */
+
+        .gridContainer{
+            display: grid;
+            /* Nomeando as grid lines */
+            /* grid-template-columns: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-start] 1fr [col3-end]; */
+
+            /* Nomeado as grid lines com repeat */
+            grid-template-columns: repeat(3, [col-start] 1fr [col-end]);
+            grid-template-rows: [header-start] 75px [header-end nav-start] 50px [nav-end main-start] 1fr [main-end footer-start] 50px [footer-end];
+            gap: 1em;
+        }
+
+        .header{
+            grid-column: col-start 1/ col-end 3;
+            grid-row: header;
+        }
+
+        .nav{
+            grid-column: col-start 1 / col-end 2;
+            grid-row: nav;
+        }
+
+        .aside{
+            grid-column: col-start 3; 
+            grid-row: nav-start / footer-end;
+            z-index: 1;        
+        }
+        
+        .main{
+            grid-column: col-start 1 / col-end 2;
+            grid-row: main;
+        }
+
+        .footer{
+            grid-column: col-start 1 / span 3;
+            grid-row: footer; 
+            background-color: rgb(0, 0, 0, .5);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="gridContainer">
+
+        <header class="header gridItem">header</header>
+        <nav class="nav gridItem">nav</nav>
+        <aside class="aside gridItem">aside</aside>
+        <main class="main gridItem">
+            main
+        </main>
+        <footer class="footer gridItem">footer</footer>
+
+    </div>
+    
+</body>
+</html>
