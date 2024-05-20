@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        body{
+            font-family: sans-serif;
+            margin-bottom: 100vh;
+        }
+
+        .cena{
+            border: 2px solid #ccc;
+            width: 300px;
+            aspect-ratio: 1;
+            margin: 80px;
+        }
+
+        .plano{
+            background-color: red;
+        }
+
+        #cena1{
+            perspective: 600px;
+        }
+
+        #cena1 .plano{
+            width: 200px;
+            margin: 50px;
+            aspect-ratio: 1;
+            transform: rotateY(45deg);
+        }
+
+        #cena2 .plano{
+            width: 200px;
+            margin: 50px;
+            aspect-ratio: 1;
+            transform: perspective(600px) rotateY(25deg);
+        }
+
+        #cena3,
+        #cena4{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        #cena3 .plano,
+        #cena4 .plano{
+            margin: 1rem;
+        }
+
+        #cena3{
+            perspective: 600px;
+            /* perspective-origin: center bottom; */
+        }
+
+        #cena3 .plano{
+            transform: rotateX(25deg);
+            backface-visibility: hidden;
+        }
+
+        #cena4 .plano{
+            transform: perspective(600px) rotateX(45deg);
+        }
+
+    </style>
+    <title>Perspective</title>
+</head>
+<body>
+
+    <div class="cena" id="cena1">
+        <div class="plano">plano</div>
+    </div>
+
+    <div class="cena" id="cena2">
+        <div class="plano">plano</div>
+    </div>
+
+    <div class="cena" id="cena3">
+        <div class="plano">plano1</div>
+        <div class="plano">plano2</div>
+        <div class="plano">plano3</div>
+        <div class="plano">plano4</div>
+        <div class="plano">plano5</div>
+        <div class="plano">plano6</div>
+        <div class="plano">plano7</div>
+        <div class="plano">plano8</div>
+        <div class="plano">plano9</div>
+    </div>
+
+    <div class="cena" id="cena4">
+        <div class="plano">plano1</div>
+        <div class="plano">plano2</div>
+        <div class="plano">plano3</div>
+        <div class="plano">plano4</div>
+        <div class="plano">plano5</div>
+        <div class="plano">plano6</div>
+        <div class="plano">plano7</div>
+        <div class="plano">plano8</div>
+        <div class="plano">plano9</div>
+    </div>
+    
+
+</body>
+</html>
