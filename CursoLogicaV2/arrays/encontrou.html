@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    
+    <h1>Arrays</h1>
+
+    <p>Dado um array qualquer, mostre em um alert um boolean indicado se encontrou um dos seguidores valores nesse array: null, endefined ou NaN</p>
+
+    <script>
+
+        const coisas = [0, "pão", 1, 2, 3];
+        let encontrou =false;
+
+        for(let i = 0; i < coisas.length; i++){
+
+            let c = coisas[i];
+            if(c === null || c === undefined || isNaN(c)){
+                encontrou = true;
+                break;
+            }
+        }
+
+        alert("Encontrou null, undefined ou NaN? " + encontrou);
+
+    </script>
+    
+</body>
+</html>

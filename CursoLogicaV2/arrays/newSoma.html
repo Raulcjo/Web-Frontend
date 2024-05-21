@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    
+    <h1>Arrays</h1>
+
+    <p>Dado um array que pode conter valores de tipos diferentes, mostre num  alert a soma de todos os números.</p>
+
+    <script>
+
+        const numeros = [1, "agora", 2, null, true, 3, 4, [], 5, false, "6"];
+
+        let soma = 0;
+
+        for(let i = 0; i < numeros.length; i++){
+
+            let n = numeros[i];
+
+            if(typeof n === "number"){
+                //Soma somente os número de fato
+                soma += n;
+            }
+
+        }
+
+        alert("A soma de todos os números é " + soma)
+
+    </script>
+    
+</body>
+</html>

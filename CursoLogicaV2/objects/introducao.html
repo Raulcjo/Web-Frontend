@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <h1>Objetos</h1>
+
+    <p> Mostrar na tela os dados de um produto específico que estão agrupados num único objeto.
+        Os dados que devem ser mostardos são: nome, preço e quantidade em estoque.</p>
+
+    <script>
+
+        const caneta = {
+            nome: "caneta",
+            preco: 2,
+            quantidade: 20
+        }
+
+        document.write(caneta.nome + " custa R$" + caneta.preco + " e há " + caneta.quantidade + " unidades em estoque <br>");
+        document.write(`${caneta.nome} custa R$${caneta.preco} e há ${caneta.quantidade} unidades em estoque <br>`);
+
+    </script>
+    
+</body>
+</html>

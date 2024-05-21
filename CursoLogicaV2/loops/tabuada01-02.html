@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada 1</title>
+</head>
+<body>
+    
+    <h1>Loops - tabuada</h1>
+    <script>
+
+        let n = parseFloat(prompt("Digite um número"));
+
+        if(!isNaN(n)){
+            let contador = 0;
+
+            while(contador <= 1000){
+            document.write(n + " x " + contador + " = " + n * contador + "<br>");
+            contador++;
+            }
+
+            document.write("saiu do loop"); //Comando não utilizado na vida real
+
+        }else{
+            alert("Digite um número");
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>
