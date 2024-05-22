@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array e objetcs</title>
+</head>
+<body>
+
+    <h1>Lista usuarios</h1>
+
+    <!-- Dado um array contendo 5 objetos (onde cada objeto possui duas propriedades "nome" e "email"), mostarr em uma lista (tag &ltul&gt) cada um desses nomes com seus respectivos emails -->
+
+    <ul id="listaUsers">
+
+    </ul>
+
+
+    <script>
+        
+        const usuarios =[
+           {nome: "Maria", email: "maria@gmail.com"},
+           {nome: "João", email: "joao@gmail.com"},
+           {nome: "Carlos", email: "carlos@gmail.com"},
+           {nome: "Julia", email: "julia@gmail.com"},
+           {nome: "Teodoro", email: "teodoro@gmail.com"}
+        ];
+
+        // console.log(usuarios)
+
+        let lista = document.getElementById("listaUsers");
+
+        /* for(let prop in usuarios){ //Outra maneira de fazer o loop
+            lista.innerHTML += `<li>${usuarios[prop].nome}: ${usuarios[prop].email}</li>`;
+        } */
+
+        for(let i = 0; i < usuarios.length; i++){
+            lista.innerHTML += `<li>${usuarios[i].nome}: ${usuarios[i].email}</li>`;
+        }
+
+    </script>
+
+</body>
+</html>

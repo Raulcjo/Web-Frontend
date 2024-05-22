@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função área do circulo</title>
+</head>
+<body>
+
+    <h1>Área de circulo</h1>
+
+    <label for="base">Raio
+        <input type="number" id="raio">
+    </label>
+    <br>
+    <button onclick="calcAreaNoPromptAlert()">Calcular área do prompt e mostrar no alert</button>
+    <br>
+    <button onclick="calcAreaNoInputAlert()">Calcular área do input e mostrar no alert</button>
+    <br>
+    <button onclick="calcAreaNoPromptOutput()">Calcular área do prompt e mostrar no output</button>
+    <br>
+    <button onclick="calcAreaNoInputOutput()">Calcular área do input </button>
+    <br>
+    <output id="output"></output>
+
+    <script>
+
+        const raio = document.getElementById("raio");
+        const output = document.getElementById("output");
+
+        function calcAreaNoPromptAlert(){
+            let raio = parseFloat(prompt("Digite o raio"))
+            let mensagem = calcArea(raio);
+
+            alert(mensagem);
+        }
+
+        function calcAreaNoInputAlert(){
+            let raioValue = parseFloat(raio.value)
+            let mensagem = calcArea(raioValue);
+
+            alert(mensagem);
+        }
+
+        function calcAreaNoPromptOutput(){
+            let raio = parseFloat(prompt("Digite o raio"))
+            let mensagem = calcArea(raio);
+
+            output.innerHTML = mensagem;
+        }
+
+        function calcAreaNoInputOutput(){
+            let raioValue = parseFloat(raio.value)
+            let mensagem = calcArea(raioValue);
+
+            output.innerHTML = mensagem;
+        }
+
+        function calcArea(raio){
+            const pi = Math.PI;
+            let area = (pi*(raio**2)).toFixed(2);
+            return `Área da circunferência de raio ${raio}u é ${area}u²`;
+        }
+
+    </script>
+    
+</body>
+</html>

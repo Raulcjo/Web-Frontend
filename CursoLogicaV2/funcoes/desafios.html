@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafios</title>
+</head>
+<body>
+
+    <script>
+
+        function somar(n1, n2){
+            return n1 + n2;
+        }
+        let resultado = somar(2, 3)
+        console.log(resultado);
+
+        function calcular(n1, n2, acao){
+            switch(acao){
+                case "+": return n1 + n2;                
+                case "-": return n1 - n2;                
+                case "*": return n1 * n2;                
+                case "/": return n1 / n2;
+                default: return null;
+            }
+        }
+        console.log(calcular(4, 5, "+"))
+        console.log(calcular(9, 5, "-"))
+        console.log(calcular(10, 5, "*"))
+        console.log(calcular(8, 2, "/"))
+        console.log(calcular(8, 2, "a"))
+
+        function ehPar(n){
+            return n % 2 === 0;
+        }
+        console.log(ehPar(2)) //console.log(true)
+        console.log(ehPar(3)) //console.log(false)
+
+        function ehBissexto(ano){
+            // let bissexto = null;
+            // if(ano % 4 === 0 && ano % 100 != 0 || ano % 400 === 0){
+            //     bissexto = true;
+            // }else{
+            //     bissexto = false;
+            // }
+            return ano % 4 == 0 && (ano % 100 !== 0 || ano % 400 === 0);
+        }
+        console.log(ehBissexto(1600))
+
+    </script>
+    
+</body>
+</html>

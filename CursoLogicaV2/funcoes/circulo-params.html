@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função área do circulo</title>
+</head>
+<body>
+
+    <h1>Área de circulo</h1>
+
+    <label for="base">Raio
+        <input type="number" id="raio">
+    </label>
+    <button onclick="calcAreaNoPrompt()">Calcular área do prompt</button>
+    <button onclick="calcAreaNoInput()">Calcular área do input</button>
+    <br>
+    <output id="output"></output>
+
+    <script>
+
+        const raio = document.getElementById("raio");
+        const output = document.getElementById("output");
+
+        function calcAreaNoPrompt(){
+            let raioValue = parseFloat(prompt("Digite o raio"));
+            calcArea(raioValue);
+        }
+
+        function calcAreaNoInput(){
+            let raioValue = parseFloat(raio.value);
+            calcArea(raioValue); //string, number, boolean
+        }
+
+        function calcArea(raio){
+            const pi = Math.PI;
+
+            let area = (pi*(raio**2)).toFixed(2);
+
+            output.innerHTML = `Área da circunferência de raio ${raio}u é ${area}u²`;
+        }
+
+    </script>
+    
+</body>
+</html>

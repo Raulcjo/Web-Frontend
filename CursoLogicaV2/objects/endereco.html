@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <h1>Objetos</h1>
+
+    <ol>
+        <li>Adicione uma propriedade endereço em pessoa que "aponte" para o objeto endereco</li>
+        <li>Mostre na tela onde João mora</li>
+        <li>Mostre no console todas as propriedades do elemento pessoa</li>
+        <li>Mostre no console todas as propriedades e seus respectivos valores do objeto pessoa</li>
+    </ol>
+
+    <script>
+
+        const endereco = {
+            logradouro: "Rua das Tulias",
+            numero: 302
+        };
+
+        const pessoa = {
+            nome: "João",
+            sobrenome: "Fagundes",
+            /* Quando o nome da propiedade e do valor são os mesmos pode ocultar o valor */
+            endereco 
+        };
+
+        document.write(`${pessoa.nome} mora na rua ${pessoa.endereco.logradouro}, número ${pessoa.endereco.numero}`);
+
+        //loop for .. in serve para interagir com um objeto
+        for(let prop in pessoa){
+            console.log(prop);
+            // console.log(pessoa.prop) // undefined
+            console.log(pessoa[prop])
+
+            // 1 - "nome" - pessoa["nome"] - pessoa.nome
+            // 2 - "sobrenome" - pessoa["sobrenome"] - pessoa.sobrenome
+            // 3 - "endereco" - pessoa["endereco"] - pessoa.endereco
+        }
+
+    </script>
+    
+</body>
+</html>

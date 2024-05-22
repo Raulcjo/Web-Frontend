@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        table{
+            border-collapse: collapse;
+        }
+
+        table, th, td{
+            border: 1px solid black;
+        }
+
+        th, td{
+            padding: 10px;
+        }
+
+        td + td{
+            text-align: right;
+        }
+
+    </style>
+    <title>Array e objetcs</title>
+</head>
+<body>
+
+    <h1>Tabela de produtos</h1>
+
+    <!-- Dado um array contendo 3 objetos, cada um representando um produto, mostrar em uma tabela (tag <table>) o nome, o preço e a quantidade em estoque de cada produto. -->
+
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Preço</th>
+                <th>Quantidade em estoque</th>
+            </tr>
+        </thead>
+        <tbody id="tabelaProdutos">
+        </tbody>
+    </table>
+
+    <script>
+        
+        const produtos =[
+           {nome: "caneta", preco: 2, estoque: 10},
+           {nome: "lápis", preco: 1.5, estoque: 4},
+           {nome: "borracha", preco: 0.75, estoque: 6},
+           {nome: "caderno", preco: 2.3, estoque: 5},
+           {nome: "régua", preco: 4, estoque: 9}
+        ];
+
+        // console.log(usuarios)
+
+        let tabelaProdutos = document.getElementById("tabelaProdutos");
+
+        for(let i = 0; i < produtos.length; i++){
+            tabelaProdutos.innerHTML += `<tr> 
+                                            <td>${produtos[i].nome}</td>
+                                            <td>R$ ${produtos[i].preco.toFixed(2)}</td>
+                                            <td>${produtos[i].estoque}</td>
+                                        </tr>`;
+        }
+
+    </script>
+
+</body>
+</html>
