@@ -12,19 +12,45 @@
     <div id="output"></div>
 
     <script>
+        let obj = {nome: "Daniel", email: "daniel@gmail.com"}
 
         try{
-            let obj = {nome: "Daniel", email: "daniel@gmail.com"}
+            document.getElementById("output").innerHTML = `Nome: ${obj.nome} - Email: ${obj.email} <br>`;
         }catch(e){
             console.log(e);
             console.log(e.message);
-            alert("deu ruim!!!" + e)
+            alert("deu ruim!!! " + e.message)
         }finally{
-            document.getElementById("output") = `Nome: ${obj.nome} - Email: ${obj.email}`;
+            alert("Fim do programa")
         }
-
        
     </script>
     
+    <script src="area.js"></script>
+
+    <script>
+
+        try{
+            console.log(calcularAreaRetangulo(2, "fss"));
+        }catch(e){
+            alert("Deu ruim: " + e.menssagem)
+        }
+
+        try{
+            let areaTriangulo = calcularAreaTriangulo(3, 5);
+            document.getElementById("output").innerHTML += `A área do triângulo é ${areaTriangulo} <br>`;
+        }catch(e){
+            alert("fim do programa");
+        }
+
+        try{
+            let areaCirculo = calcularAreaCirculo(10);
+            document.getElementById("output").innerHTML += `A área do circulo é ${areaCirculo} <br>`
+        }catch(e){
+            alert("fim do programa " + e.message);
+        }    
+
+    </script>
+
 </body>
 </html>

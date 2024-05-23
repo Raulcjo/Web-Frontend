@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos primitivos</title>
+</head>
+<body>
+    <h1>Curto-circuito</h1>
+
+    <!-- O curto-circuito acontece quando usando o operador &&, 
+         convertendo em booleano e o resultado da conversão for false 
+         ele não avalia nem um dos operadores restantes -->
+
+    <script>
+        
+        let n = 10;
+
+        n = n && 10;
+
+        console.log(n, typeof n)
+
+        n = n.toString(10) //decimal
+        console.log(n, typeof n)
+
+        n = 10
+        n = n.toString(2) //binário
+        console.log(n, typeof n)
+
+        function teste(param){
+            // param = param || 10; //curto-circuito
+            param = param !== undefined ? param : 10; 
+
+            console.log(param);
+        }
+
+        teste()
+        teste(0)
+
+
+    </script>
+    
+</body>
+</html>

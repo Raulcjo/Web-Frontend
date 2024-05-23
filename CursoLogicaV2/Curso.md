@@ -13,3 +13,6 @@
 - Linguagem de programação e seus tipos 
 - Fluxogramas
 - O que são pseudo-códigos
+
+
+- "use strict" - colocar antes de qualquer declração no javascript
