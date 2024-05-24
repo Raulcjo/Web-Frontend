@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus 
+        delectus magnam modi quas quasi similique blanditiis nobis corrupti. 
+        Sed eveniet, repellat reprehenderit culpa beatae expedita accusantium 
+        debitis quasi atque qui.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus 
+        delectus magnam modi quas quasi similique blanditiis nobis corrupti. 
+        Sed eveniet, repellat reprehenderit culpa beatae expedita accusantium 
+        debitis quasi atque qui.</p>    
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus 
+        delectus magnam modi quas quasi similique blanditiis nobis corrupti. 
+        Sed eveniet, repellat reprehenderit culpa beatae expedita accusantium 
+        debitis quasi atque qui.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus 
+        delectus magnam modi quas quasi similique blanditiis nobis corrupti. 
+        Sed eveniet, repellat reprehenderit culpa beatae expedita accusantium 
+        debitis quasi atque qui.</p>
+
+    <script>
+
+        const arr1 = new Array(3)
+        console.log(arr1)
+        console.log(arr1.length)
+
+        const arr3 = Array.from(3)
+        console.log(arr3)
+        console.log(arr3.length)
+
+        const arr2 = Array.from(arr1)
+        arr2.push(4, 5)
+        // console.log(arr2)
+
+        const paragrafos = document.querySelectorAll('p')
+        console.log(paragrafos)
+        // paragrafos.forEach( function(p, i){
+        //     p.textContent = `${++i} - ${p.textContent}`
+        // })
+
+        paraagrafos = Array.from(paragrafos) //Transformou o objeto do DOM em array
+
+        paragrafos.map(function (p, i){
+            p.textContent = `${++i} - ${p.textContent}`
+        })
+    </script>
+
+</body>
+</html>
