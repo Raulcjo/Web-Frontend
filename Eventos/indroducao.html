@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Eventos</h1>
+    <button id="btn1">botão 1</button>
+    <button id="btn2" onclick="console.log('click com atributo onclick')">botão 2</button>
+    <button id="btn3">botão 3</button>
+    
+    <script>
+        const btn1 = document.getElementById("btn1")
+        const btn2 = document.getElementById("btn2")
+        const btn3 = document.getElementById("btn3")
+
+        /* Utilizando o DOM level 0 não é possível atrelar duas funções ao mesmo elemento HTML da página, caso você tente fazer isso alguma delas irá sobrescrever a outra, executando apenas uma função */
+
+        function clicou() {
+            console.log("click funcao clicou")
+        }
+
+        btn1.onclick = function () {
+            console.log("click btn1 funcao anonima")
+        }
+        btn1.onclick = clicou
+
+        // DOM level 2
+        btn2.onclick = function () {
+            console.log("funcao anonima no btn2")
+        }
+
+        btn2.addEventListener("click", clicou)
+
+        btn2.addEventListener("click", function(){
+            console.log("click funcao anonima")
+        })
+
+    </script>
+
+</body>
+</html>
